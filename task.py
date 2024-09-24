@@ -1,14 +1,14 @@
 def task_1(numbers, N): # Numbers is a list of integer values, times is how many times to operatate (int)
 
-    new_numbers = []
-
-    for i in numbers:
-        if (i % 2 == 0):
-            new_numbers.append(i + (N * 2))
-        else:
-            new_numbers.append(i - (N * 2))
-
-    return new_numbers
+    for _ in range(N):
+        for i in range(len(numbers)):
+            if numbers[i] % 2 == 0:
+            # Remove 2
+                numbers[i] -= 2
+            else:
+            # Add 2
+                numbers[i] += 2
+    return numbers
 
 def task_2(N): # N is any integer value
     msg = "The most"
@@ -58,6 +58,4 @@ def task_3(calc): # Calc is a string
     
     return result
 
-print(task_1([6, 2, -6], 3))
-print(task_2(3))
-print(task_3("12 // 0"))
+print(task_1([3, 4, 9], 3))
