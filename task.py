@@ -52,7 +52,7 @@ def task_3(calc): # Calc is a string
         result = number1 * number2
     elif operator == '//':
         if number2 == 0:
-            result = "-1"
+            result = -1
         else:
             result = number1 // number2
     
